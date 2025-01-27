@@ -20,7 +20,7 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #295d92; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #040b14;
+  --background-color: #18202c;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #151f2b;
@@ -502,7 +502,7 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
+  color: var(--heading-color);
   background-color: var(--background-color);
   padding: 60px 0;
   overflow: clip;
@@ -544,7 +544,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -555,6 +555,7 @@ section,
 .hero img {
   position: absolute;
   inset: 0;
+  top: 0px;
   display: block;
   width: 100%;
   height: 100%;
@@ -562,9 +563,10 @@ section,
   z-index: 1;
 }
 
+
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  background: color-mix(in srgb, var(--accent-color), transparent 100%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -576,13 +578,21 @@ section,
 }
 
 .hero h2 {
-  margin: 0;
-  font-size: 64px;
-  font-weight: 700;
-}
+    position: absolute; /* Make the h2 independent */
+    top: 40px; /* Move the h2 down by 10px */
+    left: 10;
+    margin: 0; /* Reset margin */
+    font-size: 64px;
+    font-weight: 700;
+    z-index: 4; /* Ensure it is above other elements */
+    
+  }
 
 .hero p {
-  margin: 5px 0 0 0;
+  position: absolute; 
+  top: 100px;
+  margin: 5px;
+  left: 10;
   font-size: 26px;
 }
 
@@ -624,17 +634,21 @@ section,
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
+  margin-left: -200px;
 }
 
 .about .content ul {
   list-style: none;
-  padding: 0;
+  display: absolute;
+  margin-left: -220px;
+
 }
 
 .about .content ul li {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   display: flex;
-  align-items: center;
+  align-items: left;
+  margin-right: -25px;
 }
 
 .about .content ul strong {
@@ -643,7 +657,7 @@ section,
 
 .about .content ul i {
   font-size: 16px;
-  margin-right: 5px;
+  margin-right: 0px;
   color: var(--accent-color);
   line-height: 0;
 }
@@ -1272,4 +1286,17 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/* New CSS */
+#skills ul {
+    margin-top: -10 px; /* Move the bullet points up by 10px */
+}
+/* New CSS */
+#skills ul {
+    margin-bottom: -1px; /* Move the bullet points up by 10px */
+}
+
+#skills .section-title h2 {
+    margin-bottom: -200px; /* Adjust this value as needed */
 }
