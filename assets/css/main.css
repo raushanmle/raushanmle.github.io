@@ -645,7 +645,7 @@ section,
 }
 
 .about .content ul li {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   display: flex;
   align-items: left;
   margin-right: -25px;
@@ -656,8 +656,9 @@ section,
 }
 
 .about .content ul i {
+  margin-top: 4px;
   font-size: 16px;
-  margin-right: 0px;
+  margin-right: flex;
   color: var(--accent-color);
   line-height: 0;
 }
