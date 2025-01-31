@@ -663,9 +663,18 @@ section,
   line-height: 0;
 }
 
+.icon-spacing {
+    margin-right: 10px; /* Adjust the value as needed */
+  }
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
+
+.stats {
+    margin-top: -50px; /* Move the entire section up by 10px */
+  }
+
 .stats .stats-item {
   padding: 30px;
   width: 100%;
@@ -908,8 +917,14 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+.services {
+    margin-top: -100px; /* Move the entire section up by 10px */
+    margin-bottom: -75px;
+  }
+
 .services .service-item {
   position: relative;
+
 }
 
 .services .service-item .icon {
@@ -961,6 +976,11 @@ section,
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
+.testimonials {
+    margin-top: -80px; /* Move the entire section up by 10px */
+    margin-bottom: -25px;
+  }
+
 .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
