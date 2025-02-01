@@ -543,25 +543,78 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  width: 100%;
-  min-height: 60vh;
-  position: relative;
-  padding: 80px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
 .hero img {
-  position: absolute;
-  inset: 0;
-  top: 0px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+    position: absolute;
+    inset: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fit the full image without cropping */
+    object-position: left;
+    z-index: 1;
 }
+/* Adjust height for smaller screens */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+      min-height: 10vh; 
+    }
+    .hero h2 {
+        position: absolute; /* Make the h2 independent */
+        top: 21px; /* Move the h2 down by 10px */
+        left: 14px;
+        margin: -10px; /* Reset margin */
+        font-size: 13px;
+        font-weight: 700;
+        z-index: 4; /* Ensure it is above other elements */
+        color: #000000;
+        
+      }
+       .hero p {
+        position: absolute; 
+        top: 25px;
+        margin: -1px;
+        left: 5px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #000000;
+      }
+  }
+  
+  @media (min-width: 768px) {
+    .hero {
+      height: 53vh; /* Adjust height for larger screens */
+
+    }
+    .hero h2 {
+        position: absolute; /* Make the h2 independent */
+        top: 28px; /* Move the h2 down by 10px */
+        left: -147px;
+        margin: 10px; /* Reset margin */
+        font-size: 43px;
+        font-weight: 700;
+        z-index: 4; /* Ensure it is above other elements */
+        color: #000000;
+        
+      }
+    .hero p {
+        position: absolute; 
+        top: 75px;
+        margin: 5px;
+        left: -5%;
+        font-size: 26px;
+        font-weight: 700;
+        color: #000000;
+      }
+  }
 
 
 .hero:before {
@@ -570,31 +623,17 @@ section,
   position: absolute;
   inset: 0;
   z-index: 2;
+  margin: 100px;
 }
 
 .hero .container {
   position: relative;
-  z-index: 3;
+  z-index: 1;
 }
 
-.hero h2 {
-    position: absolute; /* Make the h2 independent */
-    top: 40px; /* Move the h2 down by 10px */
-    left: 10;
-    margin: 0; /* Reset margin */
-    font-size: 64px;
-    font-weight: 700;
-    z-index: 4; /* Ensure it is above other elements */
-    
-  }
 
-.hero p {
-  position: absolute; 
-  top: 100px;
-  margin: 5px;
-  left: 10;
-  font-size: 26px;
-}
+
+
 
 .hero p span {
   letter-spacing: 1px;
@@ -618,30 +657,65 @@ section,
   color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
+
+/*--------------------------------------------------------------
+# Flashing Section
+--------------------------------------------------------------*/
+
+.flashing {
+    position: absolute; /* Change to absolute to center within the viewport */
+    top: 47%; /* Center vertically */
+    right: 50%; /* Center horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #000000;
   }
 
-  .hero p {
-    font-size: 20px;
-  }
-}
 
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 .about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
-  margin-left: -200px;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 20px; /* Default margin */
+  }
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .about .content h2 {
+      margin-top: -10px;
+       /* Adjust margin for smaller screens */
+    }
 }
 
+/* Adjust for larger screens */
+@media (min-width: 1200px) {
+.about .content h2 {
+    margin-top: -10px;
+    margin-left: -200px; /* Adjust margin for larger screens */
+}
+}
+
+@media (max-width: 768px){
 .about .content ul {
   list-style: none;
   display: absolute;
-  margin-left: -220px;
+  margin-left: -30px;
 
+}
+}
+
+@media (min-width: 1200px){
+    .about .content ul {
+      list-style: none;
+      display: absolute;
+      margin-left: -220px;
+    
+    }
 }
 
 .about .content ul li {
@@ -708,9 +782,14 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
+
+.skills .container{
+  margin-top: -60px;
+}
+
 .skills .progress {
   height: 60px;
-  display: block;
+  display: auto;
   background: none;
   border-radius: 0;
 }
@@ -718,7 +797,7 @@ section,
 .skills .progress .skill {
   color: var(--heading-color);
   padding: 0;
-  margin: 0 0 6px 0;
+  margin: 0 0 0px 0;
   text-transform: uppercase;
   display: block;
   font-weight: 600;
@@ -1306,19 +1385,5 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
-/* New CSS */
-#skills ul {
-    margin-top: -10 px; /* Move the bullet points up by 10px */
-}
-/* New CSS */
-#skills ul {
-    margin-bottom: -1px; /* Move the bullet points up by 10px */
-}
 
-#skills .section-title h2 {
-    margin-bottom: -200px; /* Adjust this value as needed */
-}
