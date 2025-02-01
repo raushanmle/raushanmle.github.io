@@ -455,7 +455,7 @@ h6 {
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
@@ -563,7 +563,7 @@ section,
 }
 /* Adjust height for smaller screens */
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
     .hero {
       min-height: 10vh; 
     }
@@ -589,7 +589,7 @@ section,
       }
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     .hero {
       height: 53vh; /* Adjust height for larger screens */
 
@@ -685,7 +685,7 @@ section,
   }
 
 /* Adjust for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
     .about .content h2 {
       margin-top: -10px;
        /* Adjust margin for smaller screens */
@@ -700,7 +700,7 @@ section,
 }
 }
 
-@media (max-width: 768px){
+@media (max-width: 1199px) {
 .about .content ul {
   list-style: none;
   display: absolute;
@@ -916,7 +916,7 @@ section,
   margin-right: 0;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 1199px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
     margin: 0 5px;
