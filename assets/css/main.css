@@ -255,6 +255,20 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Name Section
+--------------------------------------------------------------*/
+
+.namesubheading {
+    color: var(--default-color);
+    font-size: 11px;
+    padding: 4px 0;
+    text-align: center;
+    display: block; /* Ensure the element is a block-level element */
+    margin-bottom: 5px;
+    margin-top: -29px;
+  }
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 .mobile-nav-toggle {
@@ -275,7 +289,7 @@ h6 {
 .navmenu a,
 .navmenu a:focus {
   color: var(--nav-color);
-  padding: 15px 10px;
+  padding: 8px 10px;
   font-family: var(--nav-font);
   font-size: 16px;
   font-weight: 400;
