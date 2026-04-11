@@ -219,6 +219,11 @@ h6 {
   .header~#footer {
     margin-left: 300px;
   }
+
+  .header~#footer .container {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -390,9 +395,80 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding: 4px 0;
+  padding: 0;
   position: relative;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .footer-top {
+  padding: 40px 0 20px;
+}
+
+.footer .footer-about .logo {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--heading-color);
+}
+
+.footer .footer-about p {
+  margin-bottom: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--heading-color);
+}
+
+.footer .footer-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer .footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer .footer-links ul a,
+.footer .footer-contact a {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  transition: 0.3s;
+}
+
+.footer .footer-links ul a:hover,
+.footer .footer-contact a:hover {
+  color: var(--accent-color);
+}
+
+.footer .footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer .footer-social .social-links a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-color);
+  transition: 0.3s;
+}
+
+.footer .footer-social .social-links a:hover {
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.footer .footer-bottom {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 16px 0 20px;
 }
 
 .footer .copyright p {
@@ -403,6 +479,12 @@ h6 {
   margin-top: 4px;
   font-size: 13px;
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .footer .footer-top {
+    padding: 30px 0 16px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -683,20 +765,17 @@ section,
 /*--------------------------------------------------------------
 # Flashing Section
 --------------------------------------------------------------*/
-
 .flashing {
-    position: absolute; /* Change to absolute to center within the viewport */
-    top: 47%; /* Center vertically */
-    right: 50%; /* Center horizontally */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    font-weight: 700;
-    color: #000000;
-  }
-
-
+  position: absolute; /* Change to absolute to center within the viewport */
+  top: 47%; /* Center vertically */
+  right: 50%; /* Center horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
+}
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -710,7 +789,7 @@ section,
 @media (max-width: 1199px) {
     .about .content h2 {
       margin-top: -10px;
-       /* Adjust margin for smaller screens */
+      /* Adjust margin for smaller screens */
     }
 }
 
@@ -1186,6 +1265,21 @@ section,
   padding: 30px;
 }
 
+.contact .connect-title {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.contact .connect-subtitle {
+  margin-bottom: 20px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.contact .info-list {
+  display: grid;
+  gap: 16px;
+}
+
 @media (max-width: 575px) {
   .contact .info-wrap {
     padding: 20px;
@@ -1193,7 +1287,11 @@ section,
 }
 
 .contact .info-item {
-  margin-bottom: 40px;
+  margin-bottom: 0;
+  padding: 14px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--surface-color), var(--accent-color) 1%);
 }
 
 .contact .info-item i {
@@ -1223,9 +1321,48 @@ section,
   font-size: 14px;
 }
 
+.contact .info-item p a {
+  color: var(--default-color);
+}
+
+.contact .info-item p a:hover {
+  color: var(--accent-color);
+}
+
 .contact .info-item:hover i {
   background: var(--accent-color);
   color: var(--contrast-color);
+}
+
+.contact .contact-note {
+  margin-top: 16px;
+  border-left: 3px solid var(--accent-color);
+  padding: 10px 0 10px 12px;
+  background: color-mix(in srgb, var(--accent-color), transparent 94%);
+}
+
+.contact .contact-note p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact .social-links a {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+  margin: 0 4px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.contact .social-links a:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
 }
 
 .contact .php-email-form {
@@ -1241,13 +1378,14 @@ section,
   }
 }
 
+
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
-  border-radius: 0;
+  border-radius: 8px;
   color: var(--default-color);
   background-color: var(--surface-color);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
